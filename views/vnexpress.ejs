@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/scc/main.css">
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="navigation-container">
+            <div class="top-head">
+                <div class="web-name">
+                    <h1>VNEXPRESS</h1>
+                </div>
+
+                <div class="ham-btn">
+                    <span>
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </div>
+
+                <div class="times-btn">
+                    <span>
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- nav bar -->
+
+            <div class="nav-bar" id="nav-bar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Chính trị</a></li>
+                        <li><a href="#">Thời sự</a></li>
+                        <li><a href="#">Góc nhìn</a></li>
+                        <li><a href="#">Kinh doanh</a></li>
+                        <li><a href="#">Thể thao</a></li>
+                        <li><a href="#">Khoa học</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="banner-main-content">
+            <h2>CẬP NHẬT TIN TỨC THẾ GIỚI CHUẨN XÁC NHẤT</h2>
+            <h3>Góc nhìn toàn cảnh về tình hình thế giới</h3>
+
+            <button>
+                <a href="#">Tìm hiểu thêm</a>
+            </button>
+
+            <div class="current-news-head">
+                <h3>Thế hệ công nghệ mới ngày nay <span>bởi Trần Toàn</span></h3>
+
+                <h3>EU siết hạn chế visa với người Nga <span>bởi Thanh Nga</span></h3>
+
+                <h3>Tái covid-19 có thật sự nhẹ nhàng<span>bởi Thục Linh</span></h3>
+
+                <h3>Ba điều cần dạy cho trẻ <span>bởi Kim Loan</span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="banner-sub-content">
+            <div class="hot-topic">
+                <img src="/images/soctranghetxang.jpg" alt="hetxang">
+
+                <div class="hot-topic-content">
+                    <h2>Đời sống</h2>
+
+                    <h3>Hàng loạt doanh nghiệp bán lẻ xăng dầu kêu cứu</h3>
+                    <p>Các doanh nghiệp bán lẻ xăng dầu tại TP HCM, Cần Thơ, Sóc Trăng… cầu cứu Thủ tướng, Bộ Công
+                        Thương việc phải nhập lỗ 1.000-3.000 đồng mỗi lít.</p>
+                    <a href="#">Đọc thêm</a>
+                </div>
+            </div>
+
+            <div class="hot-topic">
+                <img src="images/ukraine.jpg" alt="">
+
+                <div class="hot-topic-content">
+                    <h2>Lựa chọn của Ukraine</h2>
+
+                    <h3>Tổng thống Ukraine nêu hai lựa chọn cho Nga</h3>
+                    <p>Tổng thống Ukraine Zelensky nói lực lượng Nga chỉ có thể lựa chọn giữa bỏ chạy hoặc đầu hàng, khi
+                        nhắc tới chiến dịch phản công ở miền nam.</p>
+                    <a href="#">Đọc thêm</a>
+                </div>
+            </div>
+
+            <div class="hot-topic">
+                <img src="images/untacHN.jpg" alt="">
+
+                <div class="hot-topic-content">
+                    <h2>Ùn tắc</h2>
+
+                    <h3>Ùn tắc cửa ngõ Hà Nội, TP HCM trước ngày nghỉ lễ</h3>
+                    <p>Nhiều tuyến đường ở cửa ngõ Hà Nội, TP HCM ùn ứ do người dân đổ về quê nghỉ lễ Quốc khánh, chiều
+                        31/8.</p>
+                    <a href="#">Đọc thêm</a>
+                </div>
+            </div>
+
+            <div class="hot-topic">
+                <img src="images/Singapore.jpg" alt="">
+
+                <div class="hot-topic-content">
+                    <h2>Nhà ở xã hội tại Singapore</h2>
+
+                    <h3>Singapore có nhà ở xã hội giá triệu USD</h3>
+                    <p>Hàng trăm nhà ở xã hội tại Singapore đang được bán với giá hơn 1 triệu đôla Singapore (716.000
+                        USD), trong đó ít nhất 2 căn vượt 1 triệu USD.</p>
+                    <a href="#">Đọc thêm</a>
+                </div>
+            </div>
+            <% for(let i=0; i < data.length; i++) { %>
+                <div class="hot-topic">
+                    <img src="images/<%=data[i].image%>" alt="">
+                    <div class="hot-topic-content">
+                        <h2>
+                            <%=data[i].title %>
+                        </h2>
+
+                        <h3>
+                            <%=data[i].summary %>
+                        </h3>
+                        <p>
+                            <%=data[i].content %>
+                        </p>
+                        <a href="#">Đọc thêm</a>
+                    </div>
+                </div>
+                <%} %>
+        </div>
+    </section>
+
+    <hr>
+
+    <main>
+        <section class="main-container-left">
+            <h2>Tin ngắn</h2>
+            <div class="container-top-left">
+                <article>
+                    <img src="images/daudaungoi.jpg">
+
+                    <div>
+                        <h3>Cách hạn chế đau đầu gối khi chạy bộ</h3>
+
+                        <p>Đau đầu gối là một trong những hiện tượng hay gặp khi chạy bộ, nhưng các runner vẫn có nhiều
+                            cách để hạn chế.</p>
+
+                        <a href="#">Đọc thêm <span>>></span></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="container-bottom-left">
+                <article>
+                    <img src="images/ronaldo.png">
+                    <div>
+                        <h3>Ten Hag: 'Dĩ nhiên Man Utd cần Ronaldo'</h3>
+                        <p>Theo HLV Erik ten Hag, Man Utd cần siêu sao Cristiano Ronaldo để tăng chiều sâu đội hình
+                            trước lịch đấu dày đặc mùa này.</p>
+
+                        <a href="#">Đọc thêm <span>>></span></a>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="images/FLC.jpg">
+                    <div>
+                        <h3>Cổ phiếu FLC bị đình chỉ giao dịch từ 9/9</h3>
+                        <p>HoSE vừa ra quyết định chuyển cổ phiếu FLC từ diện hạn chế giao dịch sang đình chỉ giao dịch
+                            từ ngày 9/9 do liên tục vi phạm quy định công bố thông tin.</p>
+                        <a href="#">Đọc thêm <span>>></span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="main-container-right">
+            <h2>Các tin trước</h2>
+
+            <article>
+                <h4>Đọc tin tức </h4>
+                <div>
+                    <h2>EU siết hạn chế visa với người Nga</h2>
+
+                    <p>Các ngoại trưởng EU đồng ý dừng thỏa thuận về đơn giản hóa cấp visa cho công dân Nga, song không
+                        áp
+                        lệnh cấm</p>
+
+                    <a href="#">Đọc thêm <span>>></span></a>
+                </div>
+                <img src="images/EU.jpg">
+            </article>
+
+            <article>
+                <h4>Đọc tin tức </h4>
+                <div>
+                    <h2>Serena Williams - tay vợt phá vỡ các rào cản thời trang</h2>
+
+                    <p>Nữ hoàng quần vợt Serena Williams sử dụng quần áo để thể hiện cá tính và thay đổi các quan niệm
+                        trong xã hội.</p>
+
+                    <a href="#">Đọc thêm <span>>></span></a>
+                </div>
+                <img src="images/Selena.jpg">
+            </article>
+
+            <article>
+                <h4>Đọc tin tức </h4>
+                <div>
+                    <h2>Gợi ý những món ngon dịp lễ 2/9</h2>
+
+                    <p>Chả ốc Tây Hồ, bê tái chanh, cá nướng muối ớt, ngan xào lăn, lòng heo luộc là những gợi ý hấp dẫn
+                        nhân dịp bạn bè, người thân hội ngộ, sum vầy.</p>
+
+                    <a href="#">Đọc thêm <span>>></span></a>
+                </div>
+                <img src="images/Ca.jpg">
+            </article>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>VNEXPRESS</h2>
+                <p>Báo tiếng Việt nhiều người xem nhất
+                    Thuộc Bộ Khoa học Công nghệ
+                    Số giấy phép: 548/GP-BTTTT ngày 24/08/2021</p>
+            </div>
+
+            <div class="footer-right">
+                <h2>Tổng biên tập: Thảo Vy</h2>
+                <p>Địa chỉ: Nguyễn Kiệm, Gò Vấp, TP.HCM
+                    Điện thoại: 0383365004</p>
+            </div>
+        </div>
+
+        <p>Copyright &copy; 1997-2022. Toàn bộ bản quyền thuộc VnExpress</p>
+    </footer>
+
+    <script src="/js/script.js" async defer></script>
+</body>
+
+</html>

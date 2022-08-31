@@ -1,0 +1,24 @@
+<%- contentFor('body') %>
+    <div class="container">
+        <form action="/post-editUser" method="POST">
+
+            <div class="col-12 mt-5">Create User</div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Email" value="<%= user.email %>">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="userName">User Name</label>
+                <input type="text" class="form-control" name="userName" placeholder="First Name"
+                    value="<%= user.userName %>">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label>Ảnh đại diện</label>
+                <input type="file" class="form-control-file" name="image" src="<%= user.image %>">
+            </div>
+            <input name="id" value="<%= user.id %>" type="text" hidden />
+            <button type="submit" class="btn btn-primary" style="margin-left: 16px;">Submit</button>
+        </form>
+    </div>

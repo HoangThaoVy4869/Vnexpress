@@ -1,0 +1,37 @@
+<%- contentFor('body') %>
+    <div class="container mt-3">
+        <h2>User Management</h2>
+        <p>List of users</p>
+        <a class="btn btn-info" href="/addUser">Add new user</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Images</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0; i < data.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%=data[i].userName %>
+                        </td>
+                        <td>
+                            <%=data[i].email %>
+                        </td>
+                        <td>
+                            <%=data[i].image %>
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" href="/editUser?id=<%= data[i].id %>">Edit</a>
+                            <a class="btn btn-danger" href="/deleteUser?id=<%= data[i].id %>">Delete</a>
+                        </td>
+                    </tr>
+
+                    <%} %>
+
+            </tbody>
+        </table>
+    </div>

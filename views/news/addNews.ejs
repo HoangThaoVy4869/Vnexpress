@@ -1,0 +1,50 @@
+<%- contentFor('body') %>
+    <div class="container">
+        <form action="/post-addNews" method="POST" enctype="multipart/form-data">
+
+            <div class="col-12 mt-5">Create News</div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Title</label>
+                <input type="title" name="title" class="form-control" placeholder="Title" id="title">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="metaTitle">Meta Title</label>
+                <input type="text" class="form-control" name="metaTitle" placeholder="Meta Title...">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="slug">Slug</label>
+                <input type="text" name="slug" class="form-control" placeholder="Slug" id="slug">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="summary">Summary</label>
+                <input type="text" name="summary" class="form-control" placeholder="Summary" id="summary">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" name="author" placeholder="Author Name.....">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="categoryId">Category</label>
+                <select name="categoryId" class="form-control">
+                    <option value="1">Chính trị</option>
+                    <option value="0">Thể thao</option>
+                    <option value="2">Giải Trí</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label>Images</label>
+                <input type="file" class="form-control-file" name="image">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="content">Content</label>
+                <textarea type="text" name="content" class="form-control" placeholder="content" id="content"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-left: 16px;">Create</button>
+        </form>
+    </div>

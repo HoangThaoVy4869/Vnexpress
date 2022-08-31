@@ -1,0 +1,39 @@
+<%- contentFor('body') %>
+    <div class="container mt-3">
+        <h2>List News</h2>
+        <p>List of news</p>
+        <a class="btn btn-info" href="/addNews">Add News</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Summary</th>
+                    <th>Content</th>
+                    <th>Images</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0; i < data.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%=data[i].title %>
+                        </td>
+                        <td>
+                            <%=data[i].summary %>
+                        </td>
+                        <td>
+                            <%=data[i].content %>
+                        </td>
+                        <td>
+                            <%=data[i].image %>
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" href="/editNews?id=<%= data[i].id %>">Edit</a>
+                            <a class="btn btn-danger" href="/deleteNews?id=<%= data[i].id %>">Delete</a>
+                        </td>
+                    </tr>
+                    <%} %>
+            </tbody>
+        </table>
+    </div>
